@@ -8,7 +8,7 @@ function Snake() {
 
   this.draw = function() {
     ctx.fillStyle = "#FFFFFF";
-    for (let i=0; i<this.tail.length; i++) {
+    for (let i = 0; i < this.tail.length; i++) {
       ctx.fillRect(this.tail[i].x,
         this.tail[i].y, scale, scale);
     }
@@ -17,12 +17,14 @@ function Snake() {
   }
 
   this.update = function() {
-    for (let i=0; i<this.tail.length - 1; i++) {
-      this.tail[i] = this.tail[i+1];
+    for (let i = 0; i < this.tail.length - 1; i++) {
+      this.tail[i] = this.tail[i + 1];
     }
 
-    this.tail[this.total - 1] =
-      { x: this.x, y: this.y };
+    this.tail[this.total - 1] = {
+      x: this.x,
+      y: this.y
+    };
 
     this.x += this.xSpeed;
     this.y += this.ySpeed;
@@ -45,7 +47,7 @@ function Snake() {
   }
 
   this.changeDirection = function(direction) {
-    switch(direction) {
+    switch (direction) {
       case 'Up':
         this.xSpeed = 0;
         this.ySpeed = -scale * 1;
@@ -76,10 +78,10 @@ function Snake() {
   }
 
   this.checkCollision = function() {
-    for (var i=0; i<this.tail.length; i++) {
+    for (var i = 0; i < this.tail.length; i++) {
       if (this.x === this.tail[i].x &&
         this.y === this.tail[i].y) {
-				alert("Score: " + this.total);
+        alert("Score: " + this.total);
         this.total = 0;
         this.tail = [];
       }
