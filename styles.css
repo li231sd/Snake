@@ -1,28 +1,28 @@
 body {
-	background-color: #EDEDED;
+  background-color: #ededed;
 }
 
 #canvas-container {
   width: 100%;
-  text-align:center;
+  text-align: center;
 }
 
 canvas {
   display: inline;
-	border: 3px;
+  border: 3px;
 }
 
 .score {
-	display: inline;
-	font-family: 'Montserrat', sans-serif;
+  display: inline;
+  font-family: "Montserrat", sans-serif;
 }
 
 .title {
-	font-family: sans-serif; 
-	text-align: center;
+  font-family: sans-serif;
+  text-align: center;
 }
 
 .prefix-score {
-	display: inline; 
-	font-family: 'Montserrat', sans-serif;
+  display: inline;
+  font-family: "Montserrat", sans-serif;
 }
